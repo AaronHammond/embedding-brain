@@ -4,6 +4,10 @@
   "description": "A neural network library, built to support input embeddings alongside ordinary inputs and output probabilities",
   "main": "index.js",
   "author": "Aaron Hammond <ahammond@mit.edu> (http://ahammond.me/)",
-  "license": "ISC",
-  "keywords": ["neural network", "embedding", "machine learning"]
+  "license": "MIT",
+  "keywords": ["neural network", "embedding", "machine learning"],
+  "repository": {
+  	"type": "git",
+  	"url": "http://github.com/AaronHammond/embedding-brain.git"
+  }
 }
