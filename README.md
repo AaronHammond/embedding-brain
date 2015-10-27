@@ -5,13 +5,12 @@ A neural network library in Javascript, built to support input embeddings alongs
 	
 	npm install embedding-brain
 
-### ES6 - *Important*
 This library makes some use of features (only generators, currently) of ECMAScript 6. This means that your version of `node` must have support either for the `--harmony` execution flag or come out of the box with support for generators (most recent versions). Please see [the node.js documentation](https://nodejs.org/en/docs/es6/) for more information
 
 
 ## Usage
 
-### new NeuralNetwork(options)
+#### new NeuralNetwork(options)
 Initialize a neural network with the corresponding options and random starting weights.
 
 	options = {
@@ -25,28 +24,32 @@ Initialize a neural network with the corresponding options and random starting w
 		outputLabels: [String],  // string labels for each of the output signals. default: ["0", "1", ...]
 	}
 
-### NeuralNetwork#train(labeledInputSignals, labeledEmbeddingVectors, labeledOutputSignals)
+#### NeuralNetwork#train(labeledInputSignals, labeledEmbeddingVectors, labeledOutputSignals)
 Train the neural network, with each input signal taking a value according to the labeled vector, each input embedding taking the vector matching its label, and each output signal taking a value according to the labeled vector. Returns an object of the form:
+
 	{
 		resultEmbeddings: {
 			embeddingLabel: updatedEmbeddingVector
 		}
 	}
+
 for each embedding label and its corresponding updated vector. See example.
 
-### NeuralNetwork#predict(labeledInputSignals, labeledEmbeddingVectors)
+#### NeuralNetwork#predict(labeledInputSignals, labeledEmbeddingVectors)
 Compute (softmax) output signals with the neural network, with each input signal taking a value according to the labeled vector and each input embedding taking the vector matching its label. Returns an object of the form:
+
 	{
 		outputs: {
 			outputLabel: outputSignal
 		}
 	}
+
 for each output unit.
 
-### NeuralNetwork#reset()
+#### NeuralNetwork#reset()
 Reset the weights learned in the network to random values.
 
-### Utils.Vector.random(n)
+#### Utils.Vector.random(n)
 Return a vector (array) of n random values between 0 and 1 (exclusive). Useful for initializing embedding vectors before further training.
 
 ## Example
