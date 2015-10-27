@@ -1,0 +1,9 @@
+{
+  "name": "embedding-brain",
+  "version": "1.0.0",
+  "description": "A neural network library, built to support input embeddings alongside ordinary inputs and output probabilities",
+  "main": "index.js",
+  "author": "Aaron Hammond <ahammond@mit.edu> (http://ahammond.me/)",
+  "license": "ISC",
+  "keywords": ["neural network", "embedding", "machine learning"]
+}
